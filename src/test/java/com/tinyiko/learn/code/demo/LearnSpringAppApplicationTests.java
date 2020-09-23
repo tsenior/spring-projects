@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class LearnSpringAppApplicationTests {
 
+    //Test if the application configurations and the ApplicationContext are able to startup together and work appropriately
     @Test
     public void contextLoads() {
 
