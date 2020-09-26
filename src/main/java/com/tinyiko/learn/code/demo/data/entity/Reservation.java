@@ -14,11 +14,10 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RESERVATION_ID")
     private long reservationId;
-
     @Column(name = "ROOM_ID ")
     private long roomId;
     @Column(name = "GUEST_ID")
     private long guestId;
     @Column(name = "RES_DATE")
-    private Date reservationId;
+    private Date reservationDate;
 }
