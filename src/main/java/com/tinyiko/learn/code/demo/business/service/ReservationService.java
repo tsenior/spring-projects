@@ -10,10 +10,7 @@ import com.tinyiko.learn.code.demo.data.repository.RoomRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 @AllArgsConstructor
@@ -46,7 +43,10 @@ public class ReservationService {
             roomReservationDTO.setLastName(guest.getLastName());
             roomReservationDTO.setGuestId(guest.getGuestId());
         });
-
-        return null;
+        List<RoomReservationDTO> roomReservations = new ArrayList<>();
+        for (Long id: roomReservationDTOMap.keySet()){
+            roomReservations.add(roomReservationDTOMap.get(id));
+        }
+        return roomReservations;
     }
 }
