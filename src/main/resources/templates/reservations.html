@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>London hotel ko Kasi: Room Reservations </title>
+</head>
+
+<body>
+<h1>Welcome to Room Reservation Page </h1>
+<table>
+<tr>
+    <td>Room</td>
+    <td>Room Number</td>
+    <td>Guess</td>
+</tr>
+<tr th:each="roomReservations: ${roomReservations}" >
+    <td  th:text="${roomReservations.roomName}">Room Name</td>
+    <td  th:text="${roomReservations.roomNumber}">Room Number</td>
+    <td  th:text="${roomReservations.lastName}!=null?${roomReservations.lastName} + ', ' + ${roomReservations.firstName} : 'VACANT'"></td>
+</tr>
+</table>
+</body>
+</html>
