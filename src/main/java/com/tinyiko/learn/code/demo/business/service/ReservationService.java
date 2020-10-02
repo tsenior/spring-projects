@@ -47,6 +47,15 @@ public class ReservationService {
         for (Long id: roomReservationDTOMap.keySet()){
             roomReservations.add(roomReservationDTOMap.get(id));
         }
+        roomReservations.sort(new Comparator<RoomReservationDTO>() {
+            @Override
+            public int compare(RoomReservationDTO o1, RoomReservationDTO o2) {
+                if (o1.getLastName() == o2.getRoomName()){
+                    return o1.getRoomNumber().compareTo(o2.getRoomNumber());
+                }
+                return o1.getRoomName().compareTo(o2.getRoomName());
+            }
+        });
         return roomReservations;
     }
 }
