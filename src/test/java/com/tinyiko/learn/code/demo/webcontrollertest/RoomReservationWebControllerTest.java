@@ -16,6 +16,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.mockito.BDDMockito.given;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebMvcTest(RoomReservationWebController.class)
 public class RoomReservationWebControllerTest {
@@ -40,5 +46,11 @@ public class RoomReservationWebControllerTest {
         roomReservation.setRoomName("Room C");
         roomReservation.setRoomNumber("c1");
         roomReservations.add(roomReservation);
+        given(reservationService.getRoomReservationForDate(date)).willReturn(roomReservations);
+
+        this.mockMvc.perform(get("/reservations?date=2020-01-01"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Tinyiko, Chauke")));
     }
 }
+
