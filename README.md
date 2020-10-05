@@ -1,2 +1,2 @@
 # spring-projects
-Springboot 
+Spring
