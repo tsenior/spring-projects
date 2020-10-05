@@ -1,17 +1,17 @@
 # spring-projects
 Spring
-
-This is a Spring project project where i implement the below:
-
+</br>
+This is a Spring project project where i implement the below:</br>
+</br>
 Create a project with Spring Initializr</br>
-create docker container
-Define a Spring Boot skeleton
-Use remote database(postgres) for Spring Boot
-Build a service abstraction
-Use the IoC paradigm in Spring to develop a service layer
-Build controllers
-Test a controller MockMvc
-Served web pages out of our application
+create docker container</br>
+Define a Spring Boot skeleton</br>
+Use remote database(postgres) for Spring Boot</br>
+Build a service abstraction</br>
+Use the IoC paradigm in Spring to develop a service layer</br>
+Build controllers</br>
+Test a controller MockMvc</br>
+Served web pages out of our application</br>
 Served web services out of our application(Expose a service layer through REST)
 
 
