@@ -1,4 +1,4 @@
-# spring-projects
+# spring-project
 Spring
 </br>
 This is a Spring project project where i implement the below:</br>
